@@ -6,10 +6,7 @@
 #include <iostream>
 
 int main() {
-    if (!audio_input_init()) {
-        std::cerr << "Audio input initialization failed.\n";
-        return 1;
-    }
+    audio_input_init();
 
     while (true) {
         if (detect_wake_word()) {
